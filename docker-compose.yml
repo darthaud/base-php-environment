@@ -7,17 +7,17 @@ services:
     links:
       - php
     networks:
-      - darthaud
+      - my-network
     volumes:
       - .:/app
       - ./docker/nginx/my-application.conf:/etc/nginx/conf.d/my-application.conf
   php:
     image: php:7.0.12-fpm-alpine
     networks:
-      - darthaud
+      - my-network
     volumes:
       - .:/app
 networks:
-  darthaud:
+  my-network:
     external:
-      name: darthaud
+      name: my-network

@@ -35,11 +35,11 @@ PHP development environment gives you everything you need for developing PHP app
   ```
 
   ```
-  docker network create -d bridge <my-network>
+  docker network create -d bridge my-network
   ```
 
   ```
-  docker network connect <my-network> nginx-domain-proxy
+  docker network connect my-network nginx-domain-proxy
   ```
 
 - reboot
