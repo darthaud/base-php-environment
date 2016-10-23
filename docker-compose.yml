@@ -1,5 +1,13 @@
 version: '2'
 services:
+  db:
+    image: mysql:5.7.16
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: usr_myapplication
+      MYSQL_PASSWORD: pwd_myapplication
+    volumes:
+      - "./.data/db:/var/lib/mysql"
   web:
     image: nginx:1.10.1-alpine
     environment:
@@ -9,14 +17,14 @@ services:
     networks:
       - my-network
     volumes:
-      - .:/app
-      - ./docker/nginx/my-application.conf:/etc/nginx/conf.d/my-application.conf
+      - ".:/app"
+      - "./docker/nginx/my-application.conf:/etc/nginx/conf.d/my-application.conf"
   php:
     image: php:7.0.12-fpm-alpine
     networks:
       - my-network
     volumes:
-      - .:/app
+      - ".:/app"
 networks:
   my-network:
     external:
