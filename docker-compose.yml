@@ -1,0 +1,7 @@
+version: '2'
+services:
+  web:
+    image: nginx:1.10.1-alpine
+    ports:
+      - "80:80"
+  
