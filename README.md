@@ -31,7 +31,7 @@ PHP development environment gives you everything you need for developing PHP app
 - Run the following comand (only after installing docker)
 
   ```
-  docker run -d -t --restart=always -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock:ro --name=nginx-domain-proxy cartolari/nginx-proxy
+  docker run -d -t --restart=always -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock:ro --name=nginx-domain-proxy jwilder/nginx-proxy
   ```
 
   ```
