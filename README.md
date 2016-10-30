@@ -1,6 +1,6 @@
 # Base PHP development environment
 
-> Dockerized PHP development stack: Nginx, MySQL, PHP-FPM
+> Dockerized PHP development stack: Nginx, MySQL, PHP-FPM, Phpmyadmin
 
 PHP development environment gives you everything you need for developing PHP applications locally. I hope you'll find it as useful an addition to your dev-arsenal as I've found it!
 
