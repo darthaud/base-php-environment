@@ -27,6 +27,14 @@ services:
       - my-network
     volumes:
       - ".:/app"
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links: 
+      - db
+    environment:
+      VIRTUAL_HOST: phpmyadmin.myapplication.dev
+    networks:
+      - my-network
 networks:
   my-network:
     external:
