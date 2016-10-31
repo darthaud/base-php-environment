@@ -19,14 +19,14 @@ services:
     networks:
       - my-network
     volumes:
-      - ".:/app"
+      - "./app:/app"
       - "./docker/nginx/my-application.conf:/etc/nginx/conf.d/my-application.conf"
   php:
     build: docker
     networks:
       - my-network
     volumes:
-      - ".:/app"
+      - "./app:/app"
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     links: 
